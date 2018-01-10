@@ -1,0 +1,19 @@
+# Log files
+log/
+*.log
+*.log.*
+npm-debug.log
+*.rdb
+
+# Dependencies
+node_modules/
+
+# Cache files
+.DS_Store
+
+# Exported CSV files
+exports/*
+
+# Misc files
+.vscode
+
