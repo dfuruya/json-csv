@@ -21,6 +21,10 @@ const accessLogStream = FileStreamRotator.getStream({
   verbose: false,
 });
 
+// ensure exports directory exists
+const exportPath = path.resolve('exports') + '/';
+fs.existsSync(exportPath) || fs.mkdirSync(exportPath);
+
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(bodyParser.json());
 // parse application/x-www-form-urlencoded
